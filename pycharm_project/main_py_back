@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'main.py'
+#
+# Created by: PyQt5 UI code generator 5.10.1
+#
+# WARNING! All changes made in this file will be lost!
+
+import sys
+from PyQt5.QtWidgets import QApplication, QWidget
+from ui.ui import Ui_Form
+sys.path.append("/path/to/ui")
+
+
+class UiInit(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.ui = Ui_Form()
+        self.ui.setupUi(self)
+        self.show()
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    example = UiInit()
+    sys.exit(app.exec())
