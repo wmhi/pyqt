@@ -1,0 +1,31 @@
+QWidget{
+    background-color:rgb(255, 255, 255)
+}
+
+QPushButton {
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+
+    border:1px solid;
+    border-color: rgb(210, 210, 210);
+    background-color: black;
+}
+
+QPushButton:hover{
+    border-color: rgb(45, 190, 96);
+}
+
+QPushButton:pressed{
+    border-color: rgb(210, 210, 210);
+    background-color: rgb(74，74，74);
+}
+
+QLabel{
+    qproperty-text:""
+    min-width: 50;
+    min-height: 16;
+    max-width: 50;
+    max-height: 16;
+}

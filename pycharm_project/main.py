@@ -9,7 +9,8 @@
 import sys
 import os
 from PyQt5.QtWidgets import QApplication, QWidget
-from ui.ui import Ui_Form
+# from ui.ui import Ui_Form
+from test import Ui_Form
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)))
 FRONTEND = os.path.abspath(os.path.join(ABSPATH, sys.argv[0]))
 
@@ -22,3 +23,4 @@ if __name__ == "__main__":
     ui.setupUi(widget)
     widget.show()
     sys.exit(app.exec_())
+test

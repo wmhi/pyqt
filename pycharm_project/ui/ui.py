@@ -1,13 +1,25 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui.ui'
-#
-# Created by: PyQt5 UI code generator 5.10.1
-#
-# WARNING! All changes made in this file will be lost!
+# 学习对象：https://blog.csdn.net/liang19890820
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QIcon
+from PyQt5.QtCore import Qt
+
+Theme = """"""
+
+
+class TitleBar(QtWidgets.QMainWindow):
+    def __init__(self):
+        super(TitleBar, self).__init__()
+
+        """虾米音乐"""
+        """最大化，最小化，关闭按键"""
+        """用户按键"""
+
+
+
+
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -16,10 +28,10 @@ class Ui_Form(object):
 
         # 学习的对象：https://blog.csdn.net/liang19890820/article/details/50357523
 
-        """ 定义变量 """
+        """ 定义变量, 在这里继承了父类：widget """
         self.pushButton = QtWidgets.QPushButton(Form)
         self.lineEdit = QtWidgets.QLineEdit(Form)
-        self.layout = QtWidgets.QHBoxLayout()
+        self.layout = QtWidgets.QHBoxLayout(Form)
 
         """ 当鼠标放到按键上，鼠标的箭头变为手型 """
         self.pushButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
@@ -80,20 +92,26 @@ class Ui_Form(object):
         """setContentsMargins：设置layout边框到组件的空白距离"""
         self.layout.setContentsMargins(0, 0, 0, 0)
 
-        """addStrech作用:组件按这个比例占用layout空间
-        每次addWidget前调用addStretch更新属性，addWidget将使用新的属性将组件加入layout
-        之后需要调用setLayout才可以将addWidget组件真正的添加到layout，add类似提名"""
+        """
+        https://blog.csdn.net/liang19890820/article/details/51537246
+        对齐
+        https://www.jianshu.com/p/bab37cdac844
+        """
         self.layout.addStretch()
         self.layout.addWidget(self.pushButton)
 
         """
         setlayout对组件布局:
-        https://blog.csdn.net/groundhappy/article/details/52020779"""
+        https://blog.csdn.net/groundhappy/article/details/52020779
+        qtdesiner使用的第一种
+        """
         self.lineEdit.setLayout(self.layout)
+
         # self.pushButton.setLayout(self.layout)
         # self.lineEdit.setGeometry(QtCore.QRect(0, 0, 100, 15))
 
-        """ 调用lineEdit函数实现搜索栏和搜索事件"""
+        """ 调用lineEdit函数实现搜索栏和搜索事件
+        https://blog.csdn.net/rl529014/article/details/52060373"""
         # self.action1 = QtWidgets.QAction()
         # self.action1.setIcon(QIcon("./ui/icon/1.png"))
         # self.lineEdit.addAction(self.action1, 2)
@@ -102,9 +120,21 @@ class Ui_Form(object):
         # self.action1.triggered["bool"].connect(self.process)
 
         # 按键信号处理
-        # self.pushButton.click['bool'].connect(self.process)
+        self.pushButton.clicked['bool'].connect(self.process)
+        # self.pushButton.clicked.connect(self.process)
 
-    # def process(self):
-    #     print("hello world")
-    #     # self.strText = self.lineEdit.text()
-    #     # if not self.strText.isEmpty():
+
+    def process(self):
+        self.strText = self.lineEdit.text()
+
+        # print(type(self.strText))
+        # 'str' object has no attribute 'isEmpty'
+        # 所以直接使用self.strText判断
+        try:
+            if self.strText:
+                print(self.strText)
+            else:
+                print("oh no")
+
+        except Exception as e:
+            print("error:" + str(e))
