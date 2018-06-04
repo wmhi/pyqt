@@ -8,19 +8,15 @@
 
 import sys
 import os
-from PyQt5.QtWidgets import QApplication, QWidget
-# from ui.ui import Ui_Form
-from test import Ui_Form
+from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
+from untitled import *
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)))
 FRONTEND = os.path.abspath(os.path.join(ABSPATH, sys.argv[0]))
+print(ABSPATH + "\\ui")
+sys.path.append(ABSPATH + "\\ui")
 
-sys.path.append(ABSPATH + "ui")
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app = QApplication(sys.argv)
-    widget = QWidget()
-    ui = Ui_Form()
-    ui.setupUi(widget)
-    widget.show()
+    ex = UiInit()
     sys.exit(app.exec_())
-test

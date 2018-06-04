@@ -1,0 +1,117 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'untitled.ui'
+#
+# Created by: PyQt5 UI code generator 5.10.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QMainWindow
+
+
+class UiInit(QMainWindow):
+    def __init__(self):
+        super(QMainWindow, self).__init__()
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
+        self.show()
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(1162, 160)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setObjectName("pushButton")
+        self.horizontalLayout_5.addWidget(self.pushButton)
+        self.checkBox = QtWidgets.QCheckBox(self.centralwidget)
+        self.checkBox.setObjectName("checkBox")
+        self.horizontalLayout_5.addWidget(self.checkBox)
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.horizontalLayout_5.addWidget(self.pushButton_2)
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setObjectName("label_3")
+        self.horizontalLayout_5.addWidget(self.label_3)
+        self.checkBox_2 = QtWidgets.QCheckBox(self.centralwidget)
+        self.checkBox_2.setObjectName("checkBox_2")
+        self.horizontalLayout_5.addWidget(self.checkBox_2)
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setObjectName("label_4")
+        self.horizontalLayout_5.addWidget(self.label_4)
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.horizontalSlider = QtWidgets.QSlider(self.centralwidget)
+        self.horizontalSlider.setOrientation(QtCore.Qt.Horizontal)
+        self.horizontalSlider.setObjectName("horizontalSlider")
+        self.verticalLayout_2.addWidget(self.horizontalSlider)
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setObjectName("label")
+        self.verticalLayout_2.addWidget(self.label, 0, QtCore.Qt.AlignHCenter)
+        self.horizontalLayout_5.addLayout(self.verticalLayout_2)
+        self.label_5 = QtWidgets.QLabel(self.centralwidget)
+        self.label_5.setObjectName("label_5")
+        self.horizontalLayout_5.addWidget(self.label_5)
+        self.checkBox_3 = QtWidgets.QCheckBox(self.centralwidget)
+        self.checkBox_3.setObjectName("checkBox_3")
+        self.horizontalLayout_5.addWidget(self.checkBox_3)
+        self.label_6 = QtWidgets.QLabel(self.centralwidget)
+        self.label_6.setObjectName("label_6")
+        self.horizontalLayout_5.addWidget(self.label_6)
+        self.checkBox_4 = QtWidgets.QCheckBox(self.centralwidget)
+        self.checkBox_4.setObjectName("checkBox_4")
+        self.horizontalLayout_5.addWidget(self.checkBox_4)
+        self.checkBox_5 = QtWidgets.QCheckBox(self.centralwidget)
+        self.checkBox_5.setObjectName("checkBox_5")
+        self.horizontalLayout_5.addWidget(self.checkBox_5)
+        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.horizontalLayout_5.addWidget(self.pushButton_3)
+        self.pushButton_7 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_7.setObjectName("pushButton_7")
+        self.horizontalLayout_5.addWidget(self.pushButton_7)
+        self.label_7 = QtWidgets.QLabel(self.centralwidget)
+        self.label_7.setObjectName("label_7")
+        self.horizontalLayout_5.addWidget(self.label_7)
+        self.checkBox_6 = QtWidgets.QCheckBox(self.centralwidget)
+        self.checkBox_6.setObjectName("checkBox_6")
+        self.horizontalLayout_5.addWidget(self.checkBox_6)
+        self.horizontalLayout.addLayout(self.horizontalLayout_5)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1162, 23))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.pushButton.setText(_translate("MainWindow", "PushButton"))
+        self.checkBox.setText(_translate("MainWindow", "CheckBox"))
+        self.pushButton_2.setText(_translate("MainWindow", "PushButton"))
+        self.label_3.setText(_translate("MainWindow", "TextLabel"))
+        self.checkBox_2.setText(_translate("MainWindow", "CheckBox"))
+        self.label_4.setText(_translate("MainWindow", "TextLabel"))
+        self.label.setText(_translate("MainWindow", "TextLabel"))
+        self.label_5.setText(_translate("MainWindow", "TextLabel"))
+        self.checkBox_3.setText(_translate("MainWindow", "CheckBox"))
+        self.label_6.setText(_translate("MainWindow", "TextLabel"))
+        self.checkBox_4.setText(_translate("MainWindow", "CheckBox"))
+        self.checkBox_5.setText(_translate("MainWindow", "CheckBox"))
+        self.pushButton_3.setText(_translate("MainWindow", "PushButton"))
+        self.pushButton_7.setText(_translate("MainWindow", "PushButton"))
+        self.label_7.setText(_translate("MainWindow", "TextLabel"))
+        self.checkBox_6.setText(_translate("MainWindow", "CheckBox"))
+
